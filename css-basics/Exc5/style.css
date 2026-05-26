@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eef6ee;
+  color: #183a1d;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-size: 40px;
+}
+
+table {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 12px 28px rgba(24, 58, 29, 0.18);
+}
+
+th,
+td {
+  padding: 14px 16px;
+  border: 2px solid #1b5e20;
+  text-align: center;
+}
+
+th {
+  background-color: #0b3d1c;
+  color: white;
+  font-size: 16px;
+}
+
+td {
+  background-color: #74c476;
+  font-size: 15px;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #8fd98f;
+}
