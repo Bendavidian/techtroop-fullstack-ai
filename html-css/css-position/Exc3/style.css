@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f2fb;
+  color: #1f2937;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 34px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.chart {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: #7c3aed;
+  border-radius: 6px;
+  box-shadow: 0 16px 34px rgba(76, 29, 149, 0.24);
+}
+
+.axis-label {
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.money-label {
+  top: 18px;
+  left: 20px;
+}
+
+.time-label {
+  right: 22px;
+  bottom: 18px;
+}
+
+.bar {
+  position: absolute;
+  bottom: 52px;
+  width: 54px;
+  background-color: #facc15;
+  border: 3px solid #4c1d95;
+  box-sizing: border-box;
+}
+
+.bar-one {
+  left: 92px;
+  height: 80px;
+}
+
+.bar-two {
+  left: 176px;
+  height: 150px;
+}
+
+.bar-three {
+  left: 260px;
+  height: 115px;
+}
+
+.bar-four {
+  left: 344px;
+  height: 220px;
+}
+
+.bar-five {
+  left: 428px;
+  height: 175px;
+}
+
+.bar-six {
+  left: 512px;
+  height: 260px;
+}
+
+@media (max-width: 720px) {
+  .chart {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .bar {
+    width: 8%;
+  }
+
+  .bar-one {
+    left: 14%;
+  }
+
+  .bar-two {
+    left: 27%;
+  }
+
+  .bar-three {
+    left: 40%;
+  }
+
+  .bar-four {
+    left: 53%;
+  }
+
+  .bar-five {
+    left: 66%;
+  }
+
+  .bar-six {
+    left: 79%;
+  }
+}
