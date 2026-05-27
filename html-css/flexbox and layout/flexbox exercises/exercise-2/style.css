@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: #f7f9fc;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: min(90%, 900px);
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.box {
+  min-height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f80ed;
+  color: white;
+  border: 2px solid #1d4ed8;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.equal-row .box {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.small {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.wide {
+  flex-grow: 2;
+  flex-basis: 0;
+}

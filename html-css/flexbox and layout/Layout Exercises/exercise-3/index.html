@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="page">
+      <h1>Exercise 3</h1>
+      <p class="instructions">
+        This contact form uses Flexbox rows and columns for alignment, spacing,
+        and button placement.
+      </p>
+
+      <section class="gradient-area">
+        <form class="form-card">
+          <h2>Contact Form</h2>
+          <p class="subtitle">Get in touch with us</p>
+
+          <div class="form-row">
+            <label>
+              First Name
+              <input type="text" placeholder="First name">
+            </label>
+            <label>
+              Last Name
+              <input type="text" placeholder="Last name">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="full-width">
+              Email Address
+              <input type="email" placeholder="you@example.com">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Subject
+              <input type="text" placeholder="How can we help?">
+            </label>
+            <label>
+              Priority
+              <select>
+                <option>Normal</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="full-width">
+              Message
+              <textarea placeholder="Write your message"></textarea>
+            </label>
+          </div>
+
+          <div class="preferences">
+            <span>Contact Preferences</span>
+            <label><input type="checkbox"> Email Updates</label>
+            <label><input type="checkbox"> Phone Follow-up</label>
+            <label><input type="checkbox"> Newsletter</label>
+          </div>
+
+          <div class="button-row">
+            <button class="draft-button" type="button">Save Draft</button>
+            <button class="send-button" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

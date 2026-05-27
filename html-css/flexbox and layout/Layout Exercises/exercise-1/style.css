@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  background-color: #eef2ff;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: min(94%, 1120px);
+  margin: 0 auto;
+  padding: 34px 0;
+  box-sizing: border-box;
+}
+
+h1,
+.instructions {
+  text-align: center;
+}
+
+.instructions {
+  margin: 0 auto 24px;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.demo-shell {
+  min-height: 720px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(31, 41, 55, 0.18);
+}
+
+.site-header {
+  padding: 28px;
+  background: linear-gradient(135deg, #6d28d9, #2563eb);
+  color: white;
+  text-align: center;
+}
+
+.site-header h2,
+.site-footer span,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.layout-body {
+  flex: 1;
+  display: flex;
+}
+
+.navigation,
+.sidebar {
+  width: 220px;
+  padding: 26px;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.navigation h3,
+.sidebar h3 {
+  margin-bottom: 12px;
+  color: #4c1d95;
+}
+
+.navigation a {
+  padding: 10px 12px;
+  color: #334155;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #ede9fe;
+}
+
+.content {
+  flex: 1;
+  padding: 34px;
+  line-height: 1.7;
+}
+
+.content h3 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.feature-card,
+.side-card {
+  margin-top: 22px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.sidebar {
+  border-left: 1px solid #e2e8f0;
+}
+
+.side-card p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 26px;
+  background-color: #111827;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-links a {
+  color: #bfdbfe;
+  text-decoration: none;
+}
+
+@media (max-width: 780px) {
+  .layout-body,
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .navigation,
+  .sidebar {
+    width: 100%;
+  }
+}

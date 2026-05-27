@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="page">
+      <h1>Exercise 2</h1>
+      <p class="instructions">Hover over Products and Services to open dropdown menus.</p>
+      <ul class="notes">
+        <li>Flexbox aligns most items left.</li>
+        <li>Account and Cart align to the right.</li>
+        <li>Dropdowns appear above the content card.</li>
+      </ul>
+
+      <section class="demo">
+        <nav class="navbar">
+          <div class="nav-left">
+            <a href="#">Home</a>
+            <div class="menu-item">
+              <a href="#">Products</a>
+              <div class="dropdown">
+                <a href="#">Web Development</a>
+                <a href="#">Mobile Apps</a>
+                <a href="#">Digital Marketing</a>
+                <a href="#">Consulting</a>
+                <a href="#">Support</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Services</a>
+              <div class="dropdown">
+                <a href="#">UI Design</a>
+                <a href="#">Frontend Development</a>
+                <a href="#">Backend Development</a>
+                <a href="#">SEO Optimization</a>
+              </div>
+            </div>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="nav-right">
+            <a href="#">Account</a>
+            <a href="#">Cart (2)</a>
+          </div>
+        </nav>
+
+        <section class="content-card">
+          <h2>Welcome to Our Website</h2>
+          <p>
+            This navigation bar uses Flexbox for horizontal alignment and
+            absolute positioning for dropdown menus, so the menus float over the
+            page instead of pushing content down.
+          </p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
