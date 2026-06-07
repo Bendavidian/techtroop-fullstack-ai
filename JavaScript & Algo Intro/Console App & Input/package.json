@@ -1,0 +1,14 @@
+{
+  "name": "console-app-input",
+  "version": "1.0.0",
+  "description": "Console applications using Node.js command line input",
+  "scripts": {
+    "calculator": "node calculator.js",
+    "quiz": "node quiz.js",
+    "registration": "node registration.js",
+    "banking": "node banking-system.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
