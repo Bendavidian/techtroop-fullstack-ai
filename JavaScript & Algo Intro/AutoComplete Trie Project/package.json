@@ -1,0 +1,13 @@
+{
+  "name": "autocomplete-trie-project",
+  "version": "1.0.0",
+  "description": "Console-based autocomplete application using a Trie data structure.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
