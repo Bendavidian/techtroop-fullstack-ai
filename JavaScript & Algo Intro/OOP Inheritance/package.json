@@ -1,0 +1,12 @@
+{
+  "name": "oop-inheritance-exercise",
+  "version": "1.0.0",
+  "description": "OOP Inheritance exercise",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
