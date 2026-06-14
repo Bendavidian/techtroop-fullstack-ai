@@ -1,0 +1,12 @@
+{
+  "name": "oop-office-exercise",
+  "version": "1.0.0",
+  "description": "Object Oriented Programming - Office exercise",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
