@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM &amp; Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>DOM &amp; Events</h1>
+
+  <!-- ====================================
+       Exercise 1 - Ball Game
+       ==================================== -->
+  <section class="exercise" id="exercise1">
+    <h2>Exercise 1 – Ball Game</h2>
+    <p class="hint">Click the arrows or use your keyboard arrow keys to move the ball.</p>
+    <div id="field">
+      <div id="ball"></div>
+    </div>
+    <div id="controls">
+      <button class="arrow" id="up">▲</button>
+      <button class="arrow" id="left">◀</button>
+      <button class="arrow" id="down">▼</button>
+      <button class="arrow" id="right">▶</button>
+    </div>
+  </section>
+
+  <!-- ====================================
+       Exercise 2 - Reservations
+       ==================================== -->
+  <section class="exercise" id="exercise2">
+    <h2>Exercise 2 – Reservations</h2>
+    <p class="hint">Try: <strong>Bob</strong> (available), <strong>Ted</strong> (already claimed), or any other name.</p>
+    <div class="row">
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button type="button" onclick="checkReservation()">Check Reservation</button>
+    </div>
+    <p id="reservationResult"></p>
+  </section>
+
+  <!-- ====================================
+       Exercise 3 - Visual Overload
+       ==================================== -->
+  <section class="exercise" id="exercise3">
+    <h2>Exercise 3 – Visual Overload</h2>
+    <p class="hint">Hover over the boxes to change their color.</p>
+    <div id="container"></div>
+  </section>
+
+  <!-- ====================================
+       Exercise 4 - Form
+       ==================================== -->
+  <section class="exercise" id="exercise4">
+    <h2>Exercise 4 – Signup Form</h2>
+    <form id="signupForm">
+      <div class="field-row">
+        <label for="nameField">Name</label>
+        <input type="text" id="nameField" placeholder="At least 3 characters">
+      </div>
+      <div class="field-row">
+        <label for="salaryField">Desired Salary</label>
+        <input type="number" id="salaryField" placeholder="Between 10,001 and 15,999">
+      </div>
+      <div class="field-row">
+        <label for="birthdayField">Birthday</label>
+        <input type="date" id="birthdayField">
+      </div>
+      <div class="field-row">
+        <label for="phoneField">Phone</label>
+        <input type="text" id="phoneField" placeholder="10 digits, no spaces">
+      </div>
+      <div id="errors"></div>
+      <button type="button" onclick="validate()">Submit</button>
+    </form>
+    <div id="welcomeMsg"></div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
