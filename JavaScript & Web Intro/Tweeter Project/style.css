@@ -1,0 +1,202 @@
+/* ── Reset ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page ───────────────────────────────────────────────────────────────── */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f0f0;
+  padding: 24px 16px 60px;
+  color: #222;
+}
+
+/* ── App container ──────────────────────────────────────────────────────── */
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ── Title ──────────────────────────────────────────────────────────────── */
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+/* ── Main input row ─────────────────────────────────────────────────────── */
+.input-row {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+#input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+
+#input:focus {
+  border-color: #1e90ff;
+}
+
+#twit-button {
+  padding: 12px 32px;
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+#twit-button:hover {
+  background: #187bcd;
+}
+
+/* ── Posts container ────────────────────────────────────────────────────── */
+#posts {
+  background: #ddd;
+  padding: 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Individual post card ───────────────────────────────────────────────── */
+.post {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Post text ──────────────────────────────────────────────────────────── */
+.post-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* ── Comments wrapper ───────────────────────────────────────────────────── */
+.comments {
+  margin-bottom: 10px;
+}
+
+/* ── Single comment ─────────────────────────────────────────────────────── */
+.comment {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 2px 0;
+  line-height: 1.5;
+}
+
+/* Red "x" delete-comment span */
+.delete-comment {
+  color: #e53e3e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 4px;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+.delete-comment:hover {
+  text-decoration: underline;
+}
+
+/* ── Comment form (input + button) ──────────────────────────────────────── */
+.comment-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.comment-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  color: #333;
+  outline: none;
+  width: 200px;
+}
+
+.comment-input:focus {
+  border-color: #1e90ff;
+}
+
+.comment-button {
+  padding: 6px 14px;
+  background: #f0f0f0;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.comment-button:hover {
+  background: #ddd;
+}
+
+/* ── Delete Post button ─────────────────────────────────────────────────── */
+.delete {
+  padding: 6px 14px;
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.delete:hover {
+  background: #c53030;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  #input {
+    border-right: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #twit-button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .comment-form {
+    flex-wrap: wrap;
+  }
+
+  .comment-input {
+    width: 100%;
+  }
+}

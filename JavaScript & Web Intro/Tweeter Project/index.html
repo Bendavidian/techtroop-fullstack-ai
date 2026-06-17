@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweeter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+
+      <h1>Tweeter</h1>
+
+      <!-- Main post input row -->
+      <div class="input-row">
+        <input
+          type="text"
+          id="input"
+          placeholder="What's on your mind?"
+          autocomplete="off"
+        />
+        <button id="twit-button">Twit</button>
+      </div>
+
+      <!-- Posts are rendered here by render.js / main.js -->
+      <div id="posts"></div>
+
+    </div>
+
+    <!-- Load order matters: jQuery → Model → Renderer → Controller -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="model.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
