@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoComplete Trie Web UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Header -->
+      <header>
+        <h1>AutoComplete Trie Web UI</h1>
+        <p class="subtitle">
+          Build your own dictionary word by word, then search it instantly with
+          live autocomplete powered by a Trie data structure.
+        </p>
+      </header>
+
+      <!-- Section 1: Add a word -->
+      <section class="card">
+        <h2>Add Word to Dictionary</h2>
+        <div class="input-row">
+          <input
+            type="text"
+            id="add-input"
+            placeholder="Enter a word to add to dictionary"
+            autocomplete="off"
+          />
+          <button id="add-btn">Add Word</button>
+        </div>
+        <!-- Success / error messages appear here -->
+        <div id="add-message" class="message hidden"></div>
+      </section>
+
+      <!-- Section 2: Search / autocomplete -->
+      <section class="card">
+        <h2>Search Dictionary</h2>
+        <!-- Wrapper gives the dropdown something to position against -->
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Start typing to see suggestions..."
+            autocomplete="off"
+          />
+          <!-- Dropdown floats over the page (absolute positioning) -->
+          <ul id="suggestions-list" class="suggestions hidden"></ul>
+        </div>
+      </section>
+
+      <!-- Section 3: Stats card -->
+      <section class="card stats-card">
+        <div id="word-count" class="stat-number">0</div>
+        <div class="stat-label">Words in Dictionary</div>
+      </section>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
