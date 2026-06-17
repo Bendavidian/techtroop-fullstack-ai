@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage Wisdom Saver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- ── Header ──────────────────────────────────────────────────────── -->
+      <header>
+        <h1>Local Storage Wisdom Saver</h1>
+        <p class="subtitle">
+          Your wisdom items are saved right in your browser using
+          <code>localStorage</code> — they survive a page refresh!
+        </p>
+      </header>
+
+      <!-- ── Input card ──────────────────────────────────────────────────── -->
+      <div class="card input-card">
+        <div class="input-row">
+          <input
+            type="text"
+            id="wisdom-input"
+            placeholder="Write some wisdom..."
+            autocomplete="off"
+          />
+          <button id="add-btn">Add Wisdom</button>
+          <button id="clear-btn">Clear Wisdom</button>
+        </div>
+
+        <!-- Success / error messages appear here -->
+        <div id="message" class="message hidden"></div>
+      </div>
+
+      <!-- ── Wisdom list card ─────────────────────────────────────────────── -->
+      <div class="card list-card">
+        <!-- Items are rendered here by main.js -->
+        <div id="wisdom-list"></div>
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
