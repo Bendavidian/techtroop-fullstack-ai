@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX &amp; APIs</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- jQuery via CDN — required for $.ajax() calls in main.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- ── Header ─────────────────────────────────────────────────────── -->
+      <header>
+        <h1>AJAX &amp; APIs</h1>
+        <p class="subtitle">
+          Exploring HTTP GET requests, JSON parsing, and real-world APIs
+          with vanilla JavaScript and jQuery.
+        </p>
+      </header>
+
+      <!-- ── Card 1: Google Books ───────────────────────────────────────── -->
+      <section class="card" id="books-card">
+        <h2>📚 Google Books API</h2>
+
+        <!-- Exercise 1 – Fetch by ISBN (results go to the browser console) -->
+        <div class="exercise-block">
+          <h3>Exercise 1 — Fetch by ISBN</h3>
+          <p class="hint">
+            Click an ISBN to fetch the book and print its details to the
+            browser console (F12 → Console).
+          </p>
+          <div class="isbn-buttons">
+            <button class="isbn-btn" data-isbn="9780575087057">9780575087057</button>
+            <button class="isbn-btn" data-isbn="9782806269171">9782806269171</button>
+            <button class="isbn-btn" data-isbn="1440633908">1440633908</button>
+            <button class="isbn-btn" data-isbn="9781945048470">9781945048470</button>
+            <button class="isbn-btn" data-isbn="9780307417138">9780307417138</button>
+          </div>
+        </div>
+
+        <!-- Exercise 2 & 3 – Generalized search (renders results on page) -->
+        <div class="exercise-block">
+          <h3>Exercise 2 &amp; 3 — Search &amp; Loop Results</h3>
+          <p class="hint">
+            Search by ISBN or title. First book is logged (Ex 2); all
+            matching books are rendered on the page (Ex 3 forEach loop).
+          </p>
+          <div class="search-row">
+            <select id="query-type">
+              <option value="isbn">ISBN</option>
+              <option value="intitle">Title</option>
+              <option value="inauthor">Author</option>
+            </select>
+            <input
+              type="text"
+              id="query-value"
+              placeholder="e.g. The Wise Man's Fear"
+              autocomplete="off"
+            />
+            <button id="fetch-book-btn">Search</button>
+          </div>
+        </div>
+
+        <!-- Loading indicator -->
+        <div id="book-loading" class="loading hidden">
+          <div class="spinner"></div>
+          <span>Fetching books…</span>
+        </div>
+
+        <!-- Book results rendered here -->
+        <div id="book-results"></div>
+      </section>
+
+      <!-- ── Card 2: Giphy ──────────────────────────────────────────────── -->
+      <section class="card" id="giphy-card">
+        <h2>🎬 Giphy API</h2>
+
+        <!-- Exercise 4 – Hard-coded "cats" search -->
+        <div class="exercise-block">
+          <h3>Exercise 4 — Load a Cats GIF</h3>
+          <p class="hint">
+            Searches Giphy for "cats", extracts
+            <code>embed_url</code>, and displays the first result.
+          </p>
+          <button id="load-cats-btn">Load Cats GIF</button>
+        </div>
+
+        <!-- Exercise 5 – User-driven search -->
+        <div class="exercise-block">
+          <h3>Exercise 5 — Search Any GIF</h3>
+          <p class="hint">
+            Enter any term and press Search. Empty input triggers a red
+            error message; failed requests show an error too.
+          </p>
+          <div class="search-row">
+            <input
+              type="text"
+              id="giphy-input"
+              placeholder="Search for a GIF…"
+              autocomplete="off"
+            />
+            <button id="giphy-search-btn">Search</button>
+          </div>
+          <!-- Success / error message area -->
+          <div id="giphy-message" class="message hidden"></div>
+        </div>
+
+        <!-- Loading indicator -->
+        <div id="giphy-loading" class="loading hidden">
+          <div class="spinner"></div>
+          <span>Loading GIF…</span>
+        </div>
+
+        <!-- GIF iframe rendered here -->
+        <div id="giphy-result"></div>
+      </section>
+
+    </div><!-- /.container -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
