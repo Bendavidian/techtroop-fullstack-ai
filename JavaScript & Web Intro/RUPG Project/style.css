@@ -1,0 +1,299 @@
+:root {
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 2rem 1rem 4rem;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+#error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Two-column layout ── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* ── Profile card ── */
+.profile-card {
+  background: var(--card);
+  min-height: 460px;
+}
+
+.user-header {
+  background: var(--blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.profile-pic {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-header h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.user-header p {
+  font-size: 0.875rem;
+  opacity: 0.85;
+  margin-top: 0.2rem;
+}
+
+/* ── Quote ── */
+.quote-section {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.45rem;
+}
+
+#quote-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+#quote-author {
+  margin-top: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ── Pokémon ── */
+.pokemon-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.5rem;
+}
+
+.pokemon-img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+#pokemon-name {
+  font-size: 0.95rem;
+}
+
+/* ── About ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 1.5rem;
+}
+
+.about-section {
+  padding: 1.1rem 1.5rem 1.75rem;
+}
+
+#about-text {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 0.4rem;
+}
+
+/* ── Friends sidebar ── */
+.friends-panel {
+  background: var(--blue);
+  color: #fff;
+  padding: 1.25rem 1rem 1.5rem;
+}
+
+.friends-panel h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+#friends-list {
+  list-style: none;
+}
+
+#friends-list li {
+  font-size: 0.9rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#friends-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+button:active {
+  filter: brightness(0.85);
+  transform: scale(0.98);
+}
+
+#generate-btn {
+  background: #16a34a;
+  color: #fff;
+}
+
+#save-btn {
+  background: var(--blue);
+  color: #fff;
+}
+
+.load-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+select {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  max-width: 210px;
+}
+
+#load-btn {
+  background: #7c3aed;
+  color: #fff;
+}
+
+/* ── Loading overlay ── */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(241, 245, 249, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  z-index: 50;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 620px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .load-controls {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  select {
+    flex: 1;
+    max-width: none;
+  }
+}

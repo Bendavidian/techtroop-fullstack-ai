@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random User Page Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="app-title">Random User Page Generator</h1>
+
+      <div id="error-message" class="hidden"></div>
+
+      <div class="layout">
+        <main class="profile-card">
+          <header class="user-header">
+            <img id="profile-picture" src="" alt="" class="profile-pic" />
+            <div>
+              <h2 id="profile-name"></h2>
+              <p id="profile-location"></p>
+            </div>
+          </header>
+
+          <section class="quote-section">
+            <p class="section-label">Favorite quote:</p>
+            <p id="quote-text"></p>
+            <p id="quote-author"></p>
+          </section>
+
+          <section class="pokemon-section">
+            <img id="pokemon-image" src="" alt="" class="pokemon-img" />
+            <p id="pokemon-name"></p>
+          </section>
+
+          <hr class="divider" />
+
+          <section class="about-section">
+            <p class="section-label">About me</p>
+            <p id="about-text"></p>
+          </section>
+        </main>
+
+        <aside class="friends-panel">
+          <h3>Friends</h3>
+          <ul id="friends-list"></ul>
+        </aside>
+      </div>
+
+      <div class="controls">
+        <button id="generate-btn">Generate User</button>
+        <button id="save-btn">Save User Page</button>
+        <div class="load-controls">
+          <select id="saved-users-select"></select>
+          <button id="load-btn">Load User Page</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="loading-overlay" class="hidden">
+      <div class="spinner"></div>
+      <p>Generating profile…</p>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
