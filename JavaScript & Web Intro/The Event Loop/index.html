@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Event Loop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>The Event Loop</h1>
+      <p class="subtitle">
+        Understand how JavaScript handles code execution, asynchronous tasks, and timing.
+      </p>
+    </header>
+
+    <main>
+
+      <!-- Call Stack -->
+      <section class="card">
+        <h2>1. Call Stack</h2>
+        <p>
+          The <strong>Call Stack</strong> is where JavaScript keeps track of which
+          function is currently running. Functions are pushed onto the stack when
+          called and popped off when they return. JavaScript is
+          <strong>single-threaded</strong> — only one thing runs at a time.
+        </p>
+        <button onclick="runCallStackExample()">Run Call Stack Example</button>
+      </section>
+
+      <!-- Blocking Code -->
+      <section class="card">
+        <h2>2. Blocking Code</h2>
+        <p>
+          <strong>Blocking code</strong> prevents anything else from running
+          until it finishes. A long-running synchronous task (like a heavy loop)
+          freezes the browser — no clicks, no animations, nothing responds.
+        </p>
+        <button onclick="runBlockingExample()">Run Blocking Example</button>
+      </section>
+
+      <!-- Async / setTimeout -->
+      <section class="card">
+        <h2>3. Async &amp; setTimeout</h2>
+        <p>
+          <code>setTimeout</code> is a <strong>Web API</strong> provided by the
+          browser. JavaScript hands the timer off to the browser and keeps
+          running. When the timer fires, the callback is placed in the
+          <strong>Callback Queue</strong> and waits for the Call Stack to be
+          empty before executing.
+        </p>
+        <button onclick="runAsyncExample()">Run Async setTimeout Example</button>
+      </section>
+
+      <!-- Event Loop -->
+      <section class="card">
+        <h2>4. The Event Loop</h2>
+        <p>
+          The <strong>Event Loop</strong> continuously checks: "Is the Call Stack
+          empty? Is there anything waiting in the Callback Queue?" If yes to
+          both, it moves the next callback onto the stack to run. This is how
+          JavaScript achieves non-blocking async behaviour despite being
+          single-threaded.
+        </p>
+        <button onclick="runEventLoopExample()">Run Event Loop Example</button>
+      </section>
+
+      <!-- Log Output -->
+      <section class="card log-card">
+        <div class="log-header">
+          <h2>Output Log</h2>
+          <button class="clear-btn" onclick="clearLog()">Clear Log</button>
+        </div>
+        <div id="log">
+          <span class="log-placeholder">Click a button above to see output here…</span>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
