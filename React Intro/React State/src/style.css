@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 36px;
+  color: #1a1a2e;
+}
+
+/* Sections */
+
+.section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.section-title {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px 20px;
+}
+
+.section-body {
+  padding: 24px 20px;
+}
+
+/* Houdini */
+
+.houdini {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.houdini-message {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Controls */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+
+button {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2e2e4e;
+}
+
+/* Landing */
+
+.landing {
+  background-color: #f7f9fc;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Home / Store */
+
+.home h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #1a1a2e;
+}
+
+.store-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f9fc;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.item-price {
+  font-size: 1rem;
+  color: #2c7a4b;
+  font-weight: 700;
+}
