@@ -1,0 +1,43 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+}
+
+.ex-space {
+  margin-bottom: 24px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.ex-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.exercise {
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+#weatherBox {
+  width: 300px;
+  height: 300px;
+}
+
+.freezing {
+  background-color: aqua;
+}
+
+.fair {
+  background-color: orange;
+}
+
+.hell-scape {
+  background-color: red;
+}
