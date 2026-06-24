@@ -1,0 +1,54 @@
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+.ex-space {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.ex-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.exercise {
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.dummy {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.dummy input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.dummy button {
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#ex-2 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+#ex-4 div {
+  margin-bottom: 4px;
+}
