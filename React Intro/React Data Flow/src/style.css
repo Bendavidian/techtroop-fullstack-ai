@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 24px;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.app h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+/* Exercise sections */
+.exercise-section {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.exercise-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #e8ecef;
+  padding-bottom: 10px;
+}
+
+/* Exercise 1 - Image Gallery */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+}
+
+button.back,
+button.forward {
+  padding: 10px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button.back:hover,
+button.forward:hover {
+  background-color: #2176ae;
+}
+
+/* Exercise 2-7 - Contact list */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-list h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+button.contact {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2c3e50;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+button.contact:hover {
+  background-color: #e8f4fd;
+  border-color: #3498db;
+}
+
+/* Exercise 6 - Conversation */
+.conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conversation h3 {
+  font-size: 1.1rem;
+  color: #444;
+  border-bottom: 1px solid #e8ecef;
+  padding-bottom: 8px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #f1f3f5;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.message.self {
+  background-color: #d9f0ff;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.message.other {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.sender {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 4px;
+}
+
+.conversation button.back {
+  align-self: flex-start;
+  margin-top: 8px;
+}
